@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src= "http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script >
+// $(document).ready(function(){
+// 	$("button").click(function(){
+// 		$("p").hide();
+// 	});
+// 	// $("p").mouseenter(function(){
+// 	// 	alert('mouse over the p');
+// 	// });
+// 	// $("p").mouseleave(function(){
+// 	// 	alert('bye,you leave this para!');
+// 	// });
+// 	$("p").mousedown(function(){
+// 		alert('you click the element p');
+// 	});
+// 	$("p").mouseup(function(){
+// 		alert('u already clicked the element p');
+// 	});
+// 	$("input").focus(function(){
+// 		$(this).css("background-color","#cccccc");
+// 	});
+
+// });
+
+$(document).ready(function(){
+	$("input").focus(function(){
+		$(this).css("background-color","#cccccc");
+	});
+	$("input").blur(function(){
+		$(this).css("background-color","#ffffff");
+	});
+	$("#hide").click(function(){
+		$("#test").hide();
+	});
+	$("#show").click(function(){
+		$("#test").show();
+	});
+	$("#te").click(function(){
+		$("p").toggle();
+	});
+	$("#fade").click(function(){
+		$("#div1").fadeToggle();
+		$("#div2").fadeToggle("slow");
+		$("#div3").fadeToggle(3000);
+	});
+
+     $("#flip").click(function(){
+     	$("#panel").slideToggle("slow");
+     });
+     $("#animal").click(function(){
+     	$("#animaltmp").animate({
+     		left:'250px',
+     		opacity:'0.5',
+     		height:'150px',
+     		width:'150px'
+     	});
+     });
+     // $("#btn1").click(function(){
+     // 	$("test1").text("Hello world!");
+     // });
+     // $("#btn2").click(function(){
+     // 	$("test2").html("<b>Hello world!</b>");
+     // });
+     // $("#btn3").click(function(){
+     // 	$("test3").val("RUNOOB");
+     // });
+      $("#btn1").click(function(){
+         $("#test1").text("Hello world!");
+      });
+      $("#btn2").click(function(){
+         $("#test2").html("<b>Hello world!</b>");
+      });
+      $("#btn3").click(function(){
+         $("#test3").val("RUNOOB");
+      });
+      $("#AJ").click(function(){
+      	$("#divtmp").load("demo_test.txt");
+      });
+
+
+});
+</script>
+<style type="text/css"> 
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+</style>
+
+</head>
+<body>
+
+<p>This is jQuery Program!</p>
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+<button >点击这里</button>
+<p id="test">如果你点击“隐藏” 按钮，我将会消失。</p>
+<button id="hide">隐藏</button>
+<button id="show">显示</button>
+
+
+
+<button id="te">隐藏/显示</button>
+<p>这是一个文本段落。</p>
+<p>这是另外一个文本段落。</p>
+
+
+<p>以下实例演示了 fadeIn() 使用了不同参数的效果。</p>
+<button id="fade">点击淡入/淡出 div 元素。</button>
+<br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+<div id="flip">点我，显示或隐藏面板。</div>
+<div id="panel">Hello world!</div>
+<button id="animal"> 开始动画</button>
+<p>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
+如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!</p>
+<div id="animaltmp" style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<p id="test1">这是一个段落。</p>
+<p id="test2">这是另外一个段落。</p>
+<p>输入框: <input type="text" id="test3" value="菜鸟教程"></p>
+<button id="btn1">设置文本</button>
+<button id="btn2">设置 HTML</button>
+<button id="btn3">设置值</button>
+
+<br>
+<br>
+<br>
+
+<div id="divtmp"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
+<button id="AJ">获取外部内容</button>
+</body>
+</html>

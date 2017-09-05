@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+	<title>jquery应用</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+       function f1(){
+         	//对象css方法(参数，参数)
+         
+          // $('h2').css('color','blue');
+          // //ajax请求
+          // $.get('./01.php',function(msg){
+          // 	alert(msg);
+          // });
+          
+          
+          $('#useremail').css('color','blue');
+           
+          $('h2').css('background-color','pink');
+          $('input').css('width','500px');     
+       }
+        
+    </script>
+</head>
+<body>
+   <h2>开始学习jquery</h2>
+     <input type="text" id="username" value="linken" />  <br>
+     <input type="text" id="useremail" value="linken@eamil.com "/>
+     <input type="button" value="触发" onclick="f1()">
+     
+
+</body>
+</html>
